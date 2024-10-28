@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ground
+    uniqueID: 3247314237
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: lampadaires
+    uniqueID: 3624083187
     locked: 0
