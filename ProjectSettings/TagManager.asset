@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -47,9 +48,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: lampadaires
+  - name: arbres
     uniqueID: 3624083187
     locked: 0
   - name: player
     uniqueID: 1359659025
+    locked: 0
+  - name: barrieres
+    uniqueID: 2915605189
+    locked: 0
+  - name: UI
+    uniqueID: 2735184067
     locked: 0
