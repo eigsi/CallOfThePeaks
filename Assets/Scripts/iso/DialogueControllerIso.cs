@@ -31,6 +31,11 @@ public class DialogueController : MonoBehaviour
         dialogueBubble.SetActive(false);
         dialogueText.text = "";
         isDialogueVisible = false;
+
+         if (typingSound != null && typingSound.isPlaying)
+        {
+            typingSound.Stop();
+        }
     }
 
     private IEnumerator TypeText()
@@ -44,6 +49,12 @@ public class DialogueController : MonoBehaviour
 
         foreach (char letter in currentDialogue.ToCharArray())
         {
+             if (!isDialogueVisible)
+            {
+                yield break; 
+            }
+
+
             dialogueText.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
