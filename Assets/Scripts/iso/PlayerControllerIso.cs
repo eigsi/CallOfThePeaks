@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerIso : MonoBehaviour
 {
     // Vitesse de déplacement du personnage
     public float speed = 5f;

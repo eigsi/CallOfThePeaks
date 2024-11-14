@@ -136,6 +136,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -164,9 +168,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2572419492283036808}
     - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2572419492283036808}
+    - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2572419492283036808}
+    - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -188,6 +200,10 @@ PrefabInstance:
       value: GetPauseInput
       objectReference: {fileID: 0}
     - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetGrabInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GetGrappleInput
       objectReference: {fileID: 0}
@@ -196,11 +212,19 @@ PrefabInstance:
       value: InputManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InputManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: InputManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2613989963232912152, guid: 54cdf6f4b856f724f951e187c9f13a14, type: 3}
