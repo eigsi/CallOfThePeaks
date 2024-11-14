@@ -10,8 +10,8 @@ public class DialogueController : MonoBehaviour
     private string currentDialogue;     // Texte actuel à afficher
     public float textSpeed = 0.05f;     // Vitesse d'apparition des caractères
     private GameObject currentSignalBubble;
- public AudioSource typingSound;
- 
+    public AudioSource typingSound;
+
     void Start()
     {
         dialogueBubble.SetActive(false);
