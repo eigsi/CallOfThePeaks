@@ -124,7 +124,7 @@
         // public List<string> passThroughLayers = new List<string>();
 
         // The number of times this player has jumped since being grounded
-        private int timesJumped = 0;
+        public int timesJumped = 0;
         // Whether the player is in the middle of a jump right now
         private bool jumping = false;
 
