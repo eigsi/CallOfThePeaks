@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - NPC
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -12,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -39,24 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: ground2
-    uniqueID: 1341331521
-    locked: 0
-  - name: ground
-    uniqueID: 3247314237
+  - name: Background
+    uniqueID: 1765749395
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: arbres
-    uniqueID: 3624083187
-    locked: 0
-  - name: player
-    uniqueID: 1359659025
-    locked: 0
-  - name: barrieres
-    uniqueID: 2915605189
-    locked: 0
-  - name: UI
-    uniqueID: 2735184067
+  - name: Foreground
+    uniqueID: 1287735505
     locked: 0
