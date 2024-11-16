@@ -211,8 +211,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8069550309542780550}
-  - {fileID: 1469004271507426732}
   - {fileID: 4521443539179496427}
+  - {fileID: 1469004271507426732}
   - {fileID: 567188997669278257}
   - {fileID: 833125873348096800}
   - {fileID: 6232003414134728711}
@@ -345,6 +345,7 @@ MonoBehaviour:
     m_Bits: 64
   grabDuration: 2
   verticalSpeed: 5
+  cooldownTime: 2
 --- !u!114 &2239461214477358208
 MonoBehaviour:
   m_ObjectHideFlags: 0

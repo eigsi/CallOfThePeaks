@@ -6,7 +6,7 @@ public class Grab : MonoBehaviour
 {
     public LayerMask groundLayer; // Assigner le layer Ground ici
     public float grabDuration = 2f; // Durée maximale de l'accrochage en secondes
-    public float verticalSpeed = 5f; // Vitesse de déplacement vertical
+    public float verticalSpeed = 10f; // Vitesse de déplacement vertical
     public float cooldownTime = 2f; // Temps de délai entre deux utilisations
 
     private Rigidbody2D rb;
@@ -16,16 +16,15 @@ public class Grab : MonoBehaviour
 
     private SpriteRenderer spriteToDisable;
     private PlayerController playerController;
-    
+
     private bool isTouchingWall = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteToDisable = transform.Find("Crampon").GetComponent<SpriteRenderer>();
-        
+        spriteToDisable = transform.Find("Crampon")?.GetComponent<SpriteRenderer>();
+
         playerController = GetComponent<PlayerController>();
-        
         if (playerController == null)
         {
             Debug.LogWarning("PlayerController n'a pas été trouvé sur ce GameObject.");
@@ -34,10 +33,10 @@ public class Grab : MonoBehaviour
 
     void Update()
     {
-        // Met à jour le cooldown
-        cooldownTimer += Time.deltaTime;
+        //cooldownTimer += Time.deltaTime;
 
-        if (Input.GetButton("Fire3") && isTouchingWall && grabTimer < grabDuration && cooldownTimer >= cooldownTime)
+        // Si les conditions pour grab sont remplies
+        if (Input.GetButton("Fire3") && isTouchingWall && grabTimer < grabDuration /*&& cooldownTimer >= cooldownTime*/)
         {
             StartGrabing();
             grabTimer += Time.deltaTime;
@@ -48,7 +47,7 @@ public class Grab : MonoBehaviour
             }
 
             float verticalInput = Input.GetAxis("Vertical");
-            rb.velocity = new Vector2(rb.velocity.x, verticalInput * verticalSpeed);
+            rb.velocity = new Vector2(rb.velocity.x, verticalInput * verticalSpeed * 2);
 
             if (playerController != null)
             {
@@ -58,7 +57,11 @@ public class Grab : MonoBehaviour
         else
         {
             StopGrabing();
-            grabTimer = 0f; // Réinitialise le compteur de grab
+
+            if (!Input.GetButton("Fire3")) // Réinitialisation seulement si le bouton est relâché
+            {
+                grabTimer = 0f;
+            }
         }
     }
 
@@ -68,7 +71,7 @@ public class Grab : MonoBehaviour
         {
             rb.gravityScale = 0; // Désactive la gravité pour permettre le mouvement vertical
             isGrabing = true;
-            cooldownTimer = 0f; // Réinitialise le cooldown après l'utilisation
+            cooldownTimer = 0f;
         }
     }
 
@@ -77,7 +80,7 @@ public class Grab : MonoBehaviour
         if (isGrabing)
         {
             rb.gravityScale = 1; // Réactive la gravité
-            rb.velocity = new Vector2(rb.velocity.x, 0); // Réinitialise la vitesse verticale
+            rb.velocity = new Vector2(rb.velocity.x, 0); // Arrête le mouvement vertical
             isGrabing = false;
 
             if (spriteToDisable != null)
@@ -87,7 +90,6 @@ public class Grab : MonoBehaviour
         }
     }
 
-    // Détecte l'entrée en contact avec un mur
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
@@ -96,7 +98,6 @@ public class Grab : MonoBehaviour
         }
     }
 
-    // Détecte la sortie de contact avec un mur
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
