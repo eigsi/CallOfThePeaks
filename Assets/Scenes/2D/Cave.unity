@@ -11564,6 +11564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slidingForce: 20
+  isSlippy: 0
 --- !u!483693784 &974669666
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -12848,6 +12849,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2D
       objectReference: {fileID: 0}
+    - target: {fileID: 4280513354922988797, guid: b0bfde00e30f13a44a6e9c197081dc46, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280513354922988797, guid: b0bfde00e30f13a44a6e9c197081dc46, type: 3}
+      propertyPath: scriptToDisable
+      value: 
+      objectReference: {fileID: 974669665}
     - target: {fileID: 4946774083386004677, guid: b0bfde00e30f13a44a6e9c197081dc46, type: 3}
       propertyPath: inputManager
       value: 
@@ -13578,6 +13587,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df2385fe39e714144b6812560cd5c640, type: 3}
+--- !u!1001 &8231004395555347029
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1640154943930229572, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640154943930229572, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640154943930229572, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640154943930229572, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640154943930229572, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640154943930229572, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640154943930229572, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640154943930229572, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640154943930229572, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640154943930229572, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951617107650962175, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951617107650962175, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951617107650962175, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1765749395
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850984719528981851, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
+      propertyPath: m_Name
+      value: Cristaux
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8054a5686d455e04a8efbdc7a58828e6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -13589,3 +13667,4 @@ SceneRoots:
   - {fileID: 2018500102}
   - {fileID: 2048162696}
   - {fileID: 406689503}
+  - {fileID: 8231004395555347029}

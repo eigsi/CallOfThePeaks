@@ -3,11 +3,12 @@ using UnityEngine;
 public class SlidingGrid : MonoBehaviour
 {
     public float slidingForce = 5f; // Force de glissement à appliquer
+    public bool isSlippy = true;
 
     private void OnCollisionStay2D(Collision2D collision)
     {
         // Vérifie si l'objet en contact est le joueur (par exemple, tag "Player")
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && isSlippy)
         {
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
             if (rb != null)

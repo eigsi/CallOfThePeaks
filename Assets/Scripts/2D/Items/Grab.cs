@@ -19,8 +19,25 @@ public class Grab : MonoBehaviour
 
     private bool isTouchingWall = false;
 
+    private SlidingGrid slidingGrid;
+
     void Start()
     {
+
+        GameObject otherObject = GameObject.Find("SlidingGround");
+
+        if (slidingGrid != null)
+        {
+            slidingGrid = slidingGrid.GetComponent<SlidingGrid>();
+// régler le problème de 
+        // if (slidingGrid != null)
+        // {
+        //     slidingGrid.isSlippy = false;
+        // }
+
+        }   
+
+        
         rb = GetComponent<Rigidbody2D>();
         spriteToDisable = transform.Find("Crampon")?.GetComponent<SpriteRenderer>();
 
@@ -33,6 +50,7 @@ public class Grab : MonoBehaviour
 
     void Update()
     {
+    
         //cooldownTimer += Time.deltaTime;
 
         // Si les conditions pour grab sont remplies
