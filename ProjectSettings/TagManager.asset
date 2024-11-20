@@ -6,6 +6,8 @@ TagManager:
   tags:
   - NPC
   - ShopItem
+  - Coffre
+  - Tente
   layers:
   - Default
   - TransparentFX
