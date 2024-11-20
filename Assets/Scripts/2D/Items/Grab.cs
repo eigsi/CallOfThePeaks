@@ -18,26 +18,10 @@ public class Grab : MonoBehaviour
     private PlayerController playerController;
 
     private bool isTouchingWall = false;
-
-    private SlidingGrid slidingGrid;
+    public bool isTrue = false;
 
     void Start()
-    {
-
-        GameObject otherObject = GameObject.Find("SlidingGround");
-
-        if (slidingGrid != null)
-        {
-            slidingGrid = slidingGrid.GetComponent<SlidingGrid>();
-// régler le problème de 
-        // if (slidingGrid != null)
-        // {
-        //     slidingGrid.isSlippy = false;
-        // }
-
-        }   
-
-        
+    {   
         rb = GetComponent<Rigidbody2D>();
         spriteToDisable = transform.Find("Crampon")?.GetComponent<SpriteRenderer>();
 
@@ -46,6 +30,8 @@ public class Grab : MonoBehaviour
         {
             Debug.LogWarning("PlayerController n'a pas été trouvé sur ce GameObject.");
         }
+
+        isTrue = true;
     }
 
     void Update()
