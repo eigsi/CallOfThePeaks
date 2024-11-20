@@ -14,7 +14,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Button
   - 
   - 
   - 
@@ -75,4 +75,7 @@ TagManager:
     locked: 0
   - name: Shop
     uniqueID: 2430898655
+    locked: 0
+  - name: Button
+    uniqueID: 1447189029
     locked: 0
