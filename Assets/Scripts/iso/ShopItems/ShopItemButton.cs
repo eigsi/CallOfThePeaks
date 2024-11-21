@@ -6,6 +6,7 @@ public class ShopItemButton : MonoBehaviour
 {
     public Image normalImage; // Image pour la version normale
     public Image darkImage;   // Image pour la version sombre
+    public int itemIndex; 
     private bool isSelected = false; // État de sélection
     private static int selectedItemCount = 0; // Compteur d'items sélectionnés
     private static int maxSelectedItems = 2;  // Nombre maximal d'items sélectionnés
@@ -13,7 +14,6 @@ public class ShopItemButton : MonoBehaviour
     void Start()
     {
         UpdateVisualState();
-        // Ajouter un listener pour le clic sur le bouton
         GetComponent<Button>().onClick.AddListener(OnButtonClick);
     }
 
@@ -24,6 +24,9 @@ public class ShopItemButton : MonoBehaviour
             // Désélectionner l'item
             isSelected = false;
             selectedItemCount--;
+
+            // Mise à jour de l'état dans le ShopItemManager
+            ShopItemManager.Instance.SetItemState(itemIndex, false);
         }
         else
         {
@@ -32,6 +35,8 @@ public class ShopItemButton : MonoBehaviour
                 // Sélectionner l'item
                 isSelected = true;
                 selectedItemCount++;
+
+                ShopItemManager.Instance.SetItemState(itemIndex, true);
             }
             else
             {
