@@ -189,12 +189,12 @@ MonoBehaviour:
 
     Jump: SPACE
 
-    Run:
-    SHIFT+Z
+    Grapple
+    : Left Click
 
-    Attack: LEFT CLICK
+    Grab : CTRL
 
-    Interact: RIGHT CLICK'
+    Interact: E'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a21ea0c31c7aa0441a51ffd10b861a59, type: 2}
   m_sharedMaterial: {fileID: -8769324414420749481, guid: a21ea0c31c7aa0441a51ffd10b861a59, type: 2}
