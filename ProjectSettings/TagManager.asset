@@ -8,6 +8,7 @@ TagManager:
   - ShopItem
   - Coffre
   - Tente
+  - Feet
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - UI
   - Ground
   - Button
-  - 
-  - 
+  - Player
+  - Boss
   - 
   - 
   - 

@@ -3,19 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class ButtonSceneLoader : MonoBehaviour
 {
-    [Tooltip("Nom de la scène à charger")]
+    [Tooltip("Name of the scene to change")]
     public string sceneToLoad;
 
     public void LoadScene()
     {
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
-            Debug.Log($"Chargement de la scène : {sceneToLoad}");
+            Debug.Log($"Scene loading : {sceneToLoad}");
             SceneManager.LoadScene(sceneToLoad);
         }
         else
         {
-            Debug.LogWarning("Aucune scène spécifiée pour ce bouton !");
+            Debug.LogWarning("No scene for this button");
         }
     }
 }

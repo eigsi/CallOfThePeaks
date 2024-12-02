@@ -25,6 +25,8 @@ public class GroundCheck : MonoBehaviour
     [HideInInspector]
     public bool groundedLastCheck = false;
 
+    
+
     /// <summary>
     /// Description:
     /// Standard Unity function called once before the first update
@@ -101,4 +103,5 @@ public class GroundCheck : MonoBehaviour
         groundedLastCheck = false;
         return false;
     }
+
 }
