@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee72a8ff92e149abbf14d5c6d07fe18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 5
+  timeRemaining: 180
   timerIsRunning: 1
   timeText: {fileID: 8609509585169140876}
   playerController: {fileID: 0}

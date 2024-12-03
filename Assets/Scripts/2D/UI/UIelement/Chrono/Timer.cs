@@ -52,7 +52,8 @@ public class Timer : MonoBehaviour
         timeToDisplay += 1; // For the timer to start at 3:00 instead of 2:59.
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+       float milliseconds = (timeToDisplay % 1) * 100;
+        timeText.text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, Mathf.FloorToInt(milliseconds));
     }
 
     private void HandlePlayerDeath()
