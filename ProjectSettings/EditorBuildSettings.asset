@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/iso/iso3_snow.unity
     guid: c0c2accd09d88df4b9e29b634c2fc892
+  - enabled: 1
+    path: "Assets/Scenes/iso/iso2_cave F\xE9lix bouffe.unity"
+    guid: 64e0679924d23c7479fcc7db054688e2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 50b4cda5fe10dd440b25aebc3276b666, type: 2}

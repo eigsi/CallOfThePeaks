@@ -20,7 +20,7 @@ TagManager:
   - Button
   - Player
   - Boss
-  - 
+  - Items
   - 
   - 
   - 
@@ -96,6 +96,9 @@ TagManager:
     locked: 0
   - name: GroundDessus
     uniqueID: 3375889815
+    locked: 0
+  - name: Items
+    uniqueID: 3519334903
     locked: 0
   - name: Arbres
     uniqueID: 3706400189
