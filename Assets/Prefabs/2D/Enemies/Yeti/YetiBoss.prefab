@@ -485,6 +485,7 @@ GameObject:
   - component: {fileID: 3265692167991034349}
   - component: {fileID: 1815377055678208931}
   - component: {fileID: 7276153299742104955}
+  - component: {fileID: 7657278839649985082}
   m_Layer: 0
   m_Name: jetDeGlace
   m_TagString: Untagged
@@ -1077,7 +1078,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    gravitySource: 0
+    gravitySource: 1
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
@@ -4267,7 +4268,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 256
     maxCollisionShapes: 256
     quality: 2
     voxelSize: 0.5
@@ -5324,6 +5325,20 @@ MonoBehaviour:
   dealDamageOnTriggerEnter: 1
   dealDamageOnTriggerStay: 1
   dealDamageOnCollision: 0
+--- !u!114 &7657278839649985082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698319802233016599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b629a631b7c49f94a936ca26d7557b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  playerHeath: {fileID: 0}
 --- !u!1 &7890486102441611353
 GameObject:
   m_ObjectHideFlags: 0

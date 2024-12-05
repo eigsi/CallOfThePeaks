@@ -33,7 +33,6 @@ public class BossHealth : MonoBehaviour
 
 		if (health <= 0)
 		{
-			Die();
 			GetComponent<Animator>().SetBool("isDead", true);
 			GetComponent<Animator>().SetBool("isPhase3", false);
 		}
@@ -42,7 +41,7 @@ public class BossHealth : MonoBehaviour
 	void Die()
 	{
 		Instantiate(deathEffect, transform.position, Quaternion.identity);
-		Destroy(gameObject);
+		GetComponent<Animator>().SetBool("isDead", false);
 	}
 
 }
