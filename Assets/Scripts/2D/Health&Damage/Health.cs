@@ -34,6 +34,8 @@ public class Health : MonoBehaviour
     [Tooltip("The amount of time to wait before respawning")]
     public float respawnWaitTime = 3f;
 
+    public MonoBehaviour movementScript;
+
     /// <summary>
     /// Description:
     /// Standard Unity function called once before the first update

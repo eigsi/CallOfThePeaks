@@ -18,6 +18,8 @@ public class BossAnimator : MonoBehaviour
     public string IdleAnimatorParameter = "isIdle";
     [Tooltip("The name of the boolean parameter in the animator which causes a transition to the walking/moving state")]
     public string MovingAnimatorParameter = "isWalking";
+    [Tooltip("The name of the trigger parameter in the animator which causes a transition to the hit state")]
+    public string HitAnimatorParameter = "isHit";
     [Tooltip("The name of the trigger parameter in the animator which causes a transition to the dead state")]
     public string DeadAnimatorParameter = "isDead";
 
@@ -78,6 +80,16 @@ public class BossAnimator : MonoBehaviour
             else
             {
                 enemyAnimator.SetBool(MovingAnimatorParameter, false);
+            }
+
+            // Handle hit state
+            if (enemyComponent.enemyState == EnemyBase.EnemyState.Hit)
+            {
+                enemyAnimator.SetBool(HitAnimatorParameter, true);
+            }
+            else
+            {
+                enemyAnimator.SetBool(HitAnimatorParameter, false);
             }
 
             // Handle dead state

@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class BossWeapon : MonoBehaviour
 {
-	public int punchAttackDamage = 1;
-	public int vomitAttackDamage = 1;
-
 	public Vector3 attackOffset;
-	public float punchAttackRange = 1f;
-	public float vomitAttackRange = 1f;
 	public LayerMask attackMask;
-
 	public Health playerHealth;
+
+	[Header("Punch Attack")]
+	public int punchAttackDamage = 1;
+	public float punchAttackRange = 1f;
+
+	[Header("Throw Attack")]
+
+	[Header("Vomit Attack")]
+    public GameObject JetDeGlace;
+	public int vomitAttackDamage = 1;
+   
+
+
+    private float nextDamageTime = 0f;
 
 	public void PunchAttack()
 	{
@@ -27,25 +35,22 @@ public class BossWeapon : MonoBehaviour
 		}
 	}
 
-	public void VomitAttack()
+	public void StartVomitAttack()
 	{
-		Vector3 pos = transform.position;
-		pos += transform.right * attackOffset.x;
-		pos += transform.up * attackOffset.y;
-
-		Collider2D colInfo = Physics2D.OverlapCircle(pos, vomitAttackRange, attackMask);
-		if (colInfo != null)
-		{
-			playerHealth.TakeDamage(vomitAttackDamage);
-		}
+		JetDeGlace.SetActive(true);
 	}
 
-	void OnDrawGizmosSelected()
-	{
-		Vector3 pos = transform.position;
-		pos += transform.right * attackOffset.x;
-		pos += transform.up * attackOffset.y;
+    public void StopVomitAttack()
+    {
+        JetDeGlace.SetActive(false);
+    }
 
-		Gizmos.DrawWireSphere(pos, punchAttackDamage);
-	}
+	// void OnDrawGizmosSelected()
+	// {
+	// 	Vector3 pos = transform.position;
+	// 	pos += transform.right * attackOffset.x;
+	// 	pos += transform.up * attackOffset.y;
+
+	// 	Gizmos.DrawWireSphere(pos, punchAttackDamage);
+	// }
 }

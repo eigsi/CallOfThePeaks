@@ -20424,6 +20424,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3265692167991034349, guid: 6f8cad053d1fa7a4081e7c3af8312ec4, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 1206586441}
+    - target: {fileID: 3265692167991034349, guid: 6f8cad053d1fa7a4081e7c3af8312ec4, type: 3}
+      propertyPath: TriggerModule.primitives.Array.data[0]
+      value: 
+      objectReference: {fileID: 1035478039}
     - target: {fileID: 5584767307952450289, guid: 6f8cad053d1fa7a4081e7c3af8312ec4, type: 3}
       propertyPath: playerHealth
       value: 
