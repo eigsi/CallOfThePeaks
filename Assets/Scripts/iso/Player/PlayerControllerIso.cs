@@ -107,15 +107,29 @@ public class PlayerControllerIso : MonoBehaviour
             FoodItem foodItem = other.GetComponent<FoodItem>();
             if (foodItem != null)
             {
+                // Ajoute la nourriture à la barre
                 FoodBarController foodBar = FindObjectOfType<FoodBarController>();
                 if (foodBar != null)
                 {
-                    foodBar.AddFood(foodItem.foodValue); // Ajoute la valeur nutritionnelle
+                    foodBar.AddFood(foodItem.foodValue);
                     Debug.Log($"Added {foodItem.foodValue} food to the bar.");
                 }
 
-                Destroy(other.gameObject); // Détruit l'item après collecte
+                // Affiche la notification avec le montant spécifique de l'item
+                FoodNotificationManager notificationManager = FindObjectOfType<FoodNotificationManager>();
+                if (notificationManager != null)
+                {
+                    notificationManager.ShowNotification(foodItem.foodValue);
+                }
+
+                // Remplace l'item par le nouveau modèle
+                foodItem.ReplaceItem();
             }
         }
     }
+
+
+
+
+
 }

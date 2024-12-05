@@ -98,9 +98,6 @@ TagManager:
   - name: GroundDessus
     uniqueID: 3375889815
     locked: 0
-  - name: Items
-    uniqueID: 3519334903
-    locked: 0
   - name: Arbres
     uniqueID: 3706400189
     locked: 0
@@ -109,6 +106,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2014932595
+    locked: 0
+  - name: Items
+    uniqueID: 3519334903
     locked: 0
   - name: Barrieres
     uniqueID: 728386403

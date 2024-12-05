@@ -15,11 +15,16 @@ public class FoodBarController : MonoBehaviour
 
     public void AddFood(float amount)
     {
-        currentFood += amount; // Ajoute de la nourriture
+        Debug.Log($"Before adding food: {currentFood}");
+
+        currentFood += amount; // Ajoute la nourriture
         currentFood = Mathf.Clamp(currentFood, 0, maxFood); // Empêche de dépasser max
-        UpdateFoodBar();
-        Debug.Log($"Food added! Current food: {currentFood}"); // Vérifie l'ajout de nourriture
+
+        Debug.Log($"After adding food: {currentFood}");
+
+        UpdateFoodBar(); // Mets à jour l'affichage
     }
+
 
     private void UpdateFoodBar()
     {
