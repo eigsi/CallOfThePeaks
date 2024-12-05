@@ -5,22 +5,22 @@ public class GameOverMenuManager : MonoBehaviour
 {
     public void RestartPreviousLevel()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex; // Obtenir l'index de la scène actuelle
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex; // Obtenir l'index de la scï¿½ne actuelle
 
-        // Vérifier si un niveau précédent existe
+        // VÃ©rifier si un niveau prÃ©cÃ©dent existe
         if (currentSceneIndex > 1) // Assurez-vous de ne pas revenir au menu principal (index 0)
         {
-            SceneManager.LoadScene(currentSceneIndex - 1); // Charger la scène précédente
+            SceneManager.LoadScene(currentSceneIndex - 1); // Charger la scÃ¨ne prÃ©cÃ©dente
         }
         else
         {
-            Debug.LogWarning("Il n'y a pas de niveau précédent !");
+            Debug.LogWarning("Il n'y a pas de niveau prÃ©cÃ©dent !");
         }
     }
 
     public void LoadMainMenu()
     {
-        Time.timeScale = 1; // Remettre le temps à la normale si nécessaire
+        Time.timeScale = 1; // Remettre le temps Ã  la normale si nÃ©cessaire
         SceneManager.LoadScene("MainMenu"); // Charger le menu principal
     }
 }
