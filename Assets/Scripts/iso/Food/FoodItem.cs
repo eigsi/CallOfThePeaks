@@ -6,6 +6,14 @@ public class FoodItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Triggered by: {other.name}"); // Affiche le nom de l’objet entrant
+        if (other.CompareTag("Player")) // Vérifie si le joueur collecte l'item
+        {
+            FoodBarController foodBar = FindObjectOfType<FoodBarController>();
+            if (foodBar != null)
+            {
+                foodBar.AddFood(foodValue); // Ajoute la nourriture à la barre
+            }
+            Destroy(gameObject); // Détruit l'objet après collecte
+        }
     }
 }
