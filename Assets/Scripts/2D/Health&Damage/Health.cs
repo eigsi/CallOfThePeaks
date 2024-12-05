@@ -282,8 +282,8 @@ public class Health : MonoBehaviour
         }
         else
         {
-            GameOver();
             Destroy(this.gameObject);
+            GameOver();
         }
         GameManager.UpdateUIElements();
     }

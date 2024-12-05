@@ -61,7 +61,7 @@ public class EnemyAnimator : MonoBehaviour
         if (enemyComponent != null && enemyAnimator != null)
         {
             // Handle idle state
-            if (enemyComponent.enemyState == EnemyBase.EnemyState.Idle)
+            if (enemyComponent.enemyState == EnemyBase.EnemyState.Idle && enemyComponent.enemyState != EnemyBase.EnemyState.Dead)
             {
                 enemyAnimator.SetBool(IdleAnimatorParameter, true);
             }
@@ -71,7 +71,7 @@ public class EnemyAnimator : MonoBehaviour
             }
 
             // Handle moving state
-            if (enemyComponent.enemyState == EnemyBase.EnemyState.Walking)
+            if (enemyComponent.enemyState == EnemyBase.EnemyState.Walking && enemyComponent.enemyState != EnemyBase.EnemyState.Dead)
             {
                 enemyAnimator.SetBool(MovingAnimatorParameter, true);
             }
