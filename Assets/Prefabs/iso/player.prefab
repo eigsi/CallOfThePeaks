@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 8671499141502816701}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: -1.04, z: -0.1043798}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.80028474, y: 0.80028474, z: 0.80028474}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,8 +79,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2014932595
-  m_SortingLayer: 7
-  m_SortingOrder: 159
+  m_SortingLayer: 20
+  m_SortingOrder: 163
   m_Sprite: {fileID: -1543855138, guid: 65107b6a261694476ad9e5836d7280b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
