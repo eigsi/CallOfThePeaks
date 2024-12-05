@@ -14,7 +14,7 @@ public abstract class EnemyBase : MonoBehaviour
     /// <summary>
     /// Enum to track which state the enemy is in
     /// </summary>
-    public enum EnemyState { Walking, Dead, Idle }
+    public enum EnemyState { Walking, Dead, Idle, Hit }
 
     [Tooltip("The state the enemy is in for animation playback")]
     public EnemyState enemyState;

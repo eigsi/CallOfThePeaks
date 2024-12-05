@@ -29,6 +29,7 @@ public class Boss : MonoBehaviour
 		{
 			Debug.LogError("Rigidbody2D n'est pas attaché à " + gameObject.name);
 		}
+		GetComponent<Animator>().SetBool("isPhase1", true);
 	}
 	
 	public void LookAtPlayer()

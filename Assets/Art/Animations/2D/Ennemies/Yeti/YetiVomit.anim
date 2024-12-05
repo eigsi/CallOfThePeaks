@@ -48,7 +48,7 @@ AnimationClip:
       value: {fileID: -1001131649, guid: 6d3f7b3c52254eb49aa09b2095dffc2a, type: 3}
     - time: 2.6
       value: {fileID: 1249029201, guid: 6d3f7b3c52254eb49aa09b2095dffc2a, type: 3}
-    - time: 2.8
+    - time: 2.8166666
       value: {fileID: -1011427160, guid: 6d3f7b3c52254eb49aa09b2095dffc2a, type: 3}
     attribute: m_Sprite
     path: 
@@ -92,7 +92,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.8166666
+    m_StopTime: 2.8333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -113,7 +113,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.6166667
-    functionName: VomitAttack
+    functionName: StartVomitAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.8166666
+    functionName: StopVomitAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
