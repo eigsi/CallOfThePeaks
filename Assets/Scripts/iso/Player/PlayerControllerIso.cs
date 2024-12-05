@@ -97,4 +97,25 @@ public class PlayerControllerIso : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Food")) // Vérifie si l'objet est un item de nourriture
+        {
+            Debug.Log($"Food item detected: {other.name}");
+
+            FoodItem foodItem = other.GetComponent<FoodItem>();
+            if (foodItem != null)
+            {
+                FoodBarController foodBar = FindObjectOfType<FoodBarController>();
+                if (foodBar != null)
+                {
+                    foodBar.AddFood(foodItem.foodValue); // Ajoute la valeur nutritionnelle
+                    Debug.Log($"Added {foodItem.foodValue} food to the bar.");
+                }
+
+                Destroy(other.gameObject); // Détruit l'item après collecte
+            }
+        }
+    }
 }

@@ -3,26 +3,26 @@ using UnityEngine.UI;
 
 public class FoodBarController : MonoBehaviour
 {
-    public Image foodFill; // L'image représentant la barre de nourriture
-    public float maxFood = 100f; // Quantité maximale de nourriture
-    private float currentFood; // Quantité actuelle de nourriture
+    public Image foodFill; // L'image reprÃ©sentant la barre de nourriture
+    public float maxFood = 100f; // QuantitÃ© maximale de nourriture
+    private float currentFood; // QuantitÃ© actuelle de nourriture
 
     void Start()
     {
-        currentFood = 0f; // Initialise la barre à zéro
+        currentFood = 0.01f; // Initialise la barre Ã  zÃ©ro
         UpdateFoodBar();
     }
 
     public void AddFood(float amount)
     {
         currentFood += amount; // Ajoute de la nourriture
-        currentFood = Mathf.Clamp(currentFood, 0, maxFood); // Empêche de dépasser max
+        currentFood = Mathf.Clamp(currentFood, 0, maxFood); // EmpÃªche de dÃ©passer max
         UpdateFoodBar();
-        Debug.Log($"Food added! Current food: {currentFood}"); // Vérifie l'ajout de nourriture
+        Debug.Log($"Food added! Current food: {currentFood}"); // VÃ©rifie l'ajout de nourriture
     }
 
     private void UpdateFoodBar()
     {
-        foodFill.fillAmount = currentFood / maxFood; // Met à jour la barre
+        foodFill.fillAmount = currentFood / maxFood; // Met Ã  jour la barre
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Coffre
   - Tente
   - Feet
+  - Food
   layers:
   - Default
   - TransparentFX
