@@ -52,7 +52,7 @@ public class Boss_Run : StateMachineBehaviour
 		//Attack Throw
 		if ( throwAttackRange1 <= Vector2.Distance(player.position, rb.position) && Vector2.Distance(player.position, rb.position) <= throwAttackRange2 && cooldownTimer >= attackCooldownThrow )
 		{
-			animator.SetTrigger("Punch");
+			animator.SetTrigger("Throw");
 			cooldownTimer = 0f; // Réinitialise le cooldown au début de l'état
 		}
 		//Attack Vomit
@@ -71,5 +71,6 @@ public class Boss_Run : StateMachineBehaviour
 	{
 		animator.ResetTrigger("Punch");
 		animator.ResetTrigger("Vomit");
+		animator.ResetTrigger("Throw");
 	}
 }
