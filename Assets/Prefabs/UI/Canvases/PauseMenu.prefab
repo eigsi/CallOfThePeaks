@@ -145,9 +145,9 @@ GameObject:
   - component: {fileID: 4967938524920004533}
   - component: {fileID: 8647090733625958591}
   - component: {fileID: 8624060382312980590}
-  - component: {fileID: 6065008260393764546}
+  - component: {fileID: 6815955719902231721}
   m_Layer: 5
-  m_Name: parametersButton
+  m_Name: settingsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,9 +255,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6065008260393764546}
-        m_TargetAssemblyTypeName: ButtonSceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 6815955719902231721}
+        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
+        m_MethodName: SwitchCanvas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -267,7 +267,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6065008260393764546
+--- !u!114 &6815955719902231721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -276,10 +276,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 637765989725412706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf7641da177317f4184f4852f13c289d, type: 3}
+  m_Script: {fileID: 11500000, guid: a109c76e45c034eb1b15277fbd17195b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Settings
+  canvasToHide: {fileID: 1130821251424896919}
+  canvasToShow: {fileID: 0}
 --- !u!1 &712101532122129273
 GameObject:
   m_ObjectHideFlags: 0
