@@ -308,6 +308,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3246534645087450739, guid: 5530b76c87225af409fc2b190b0ce558, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 5380698220484852319, guid: 5530b76c87225af409fc2b190b0ce558, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -962,6 +970,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5380698220484852319, guid: 5530b76c87225af409fc2b190b0ce558, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -58729,7 +58741,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -58813,6 +58825,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3246534645087450739, guid: 5530b76c87225af409fc2b190b0ce558, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 5380698220484852319, guid: 5530b76c87225af409fc2b190b0ce558, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -71393,6 +71413,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3246534645087450739, guid: 5530b76c87225af409fc2b190b0ce558, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 5380698220484852319, guid: 5530b76c87225af409fc2b190b0ce558, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -72465,6 +72493,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -919077481
       objectReference: {fileID: 0}
+    - target: {fileID: 755893928507778799, guid: 5d4ac90ffd69cb74a8b9649d9fef8f36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 2033973815991883248, guid: 5d4ac90ffd69cb74a8b9649d9fef8f36, type: 3}
       propertyPath: m_Name
       value: "sac abandonn\xE9 (1)"
@@ -72881,6 +72913,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -919077481
       objectReference: {fileID: 0}
+    - target: {fileID: 755893928507778799, guid: 5d4ac90ffd69cb74a8b9649d9fef8f36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 2033973815991883248, guid: 5d4ac90ffd69cb74a8b9649d9fef8f36, type: 3}
       propertyPath: m_Name
       value: "sac abandonn\xE9"
@@ -72898,6 +72934,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1808111905525706659, guid: 5b2a0c9ff1c86154caca4e1f705d06cd, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808111905525706659, guid: 5b2a0c9ff1c86154caca4e1f705d06cd, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7725286689313091378, guid: 5b2a0c9ff1c86154caca4e1f705d06cd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
