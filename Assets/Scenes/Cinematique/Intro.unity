@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 156117050}
   - component: {fileID: 156117052}
   - component: {fileID: 156117053}
+  - component: {fileID: 156117054}
   m_Layer: 0
   m_Name: "Capture d\u2019e\u0301cran 2024-10-23 155223(4)_10"
   m_TagString: Player
@@ -374,6 +375,19 @@ MonoBehaviour:
   dialogueController: {fileID: 1852018501}
   currentNPCDialogue: {fileID: 1458480450}
   index: 0
+--- !u!114 &156117054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156117047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d68fdc9f73c340cb9b189ae747e6b81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Intro2
 --- !u!1001 &1038519152
 PrefabInstance:
   m_ObjectHideFlags: 0

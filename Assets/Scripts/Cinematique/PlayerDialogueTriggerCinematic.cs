@@ -4,7 +4,7 @@ public class PlayerDialogueTriggerCinematic : MonoBehaviour
 {
     public DialogueController dialogueController; // Référence au contrôleur de dialogue
     public NPCDialogue currentNPCDialogue; // Référence au dialogue actuel du PNJ
-    private bool isNearNPC = false; // Indique si le joueur est proche d'un PNJ
+
     public int index = 0;
 
 
@@ -25,5 +25,6 @@ public class PlayerDialogueTriggerCinematic : MonoBehaviour
                 index++;
             }
         }
+
     }
 }
