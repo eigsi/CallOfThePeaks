@@ -8,6 +8,7 @@ public class FoodBarController : MonoBehaviour
     private float currentFood; // Quantité actuelle de nourriture
     public AudioClip foodSound;
     private AudioSource audioSource;
+    private FoodItem currentFoodItem; // Référence au FoodItem à proximité
 
     void Start()
     {
@@ -18,6 +19,42 @@ public class FoodBarController : MonoBehaviour
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
+
+    void Update()
+    {
+        // Vérifie si l'utilisateur appuie sur "E" et qu'un item est à proximité
+        if (Input.GetKeyDown(KeyCode.E) && currentFoodItem != null)
+        {
+            CollectFood(); // Ramasse la nourriture si un item est à proximité
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        FoodItem foodItem = other.GetComponent<FoodItem>();
+        if (foodItem != null && !foodItem.isCollected) // Vérifie que l'item n'est pas déjà collecté
+        {
+            currentFoodItem = foodItem; // Enregistre l'item à proximité
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        FoodItem foodItem = other.GetComponent<FoodItem>();
+        if (foodItem != null && foodItem == currentFoodItem)
+        {
+            currentFoodItem = null; // Efface la référence si l'item n'est plus à proximité
+        }
+    }
+
+    private void CollectFood()
+    {
+        if (currentFoodItem != null && !currentFoodItem.isCollected)
+        {
+            AddFood(currentFoodItem.foodValue); // Ajoute la nourriture
+            currentFoodItem.ReplaceItem(); // Remplace l'item (ou change son sprite)
         }
     }
 
@@ -33,7 +70,6 @@ public class FoodBarController : MonoBehaviour
         UpdateFoodBar(); // Mets à jour l'affichage
         PlaySoundEffect();
     }
-
 
     private void UpdateFoodBar()
     {

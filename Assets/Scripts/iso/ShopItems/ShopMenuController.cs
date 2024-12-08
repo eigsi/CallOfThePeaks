@@ -10,7 +10,7 @@ public class ShopMenuController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && isNearChest)
+        if (Input.GetKeyDown(KeyCode.E) && isNearChest)
         {
             bool isMenuActive = menuPanel.activeSelf;
 
