@@ -79,8 +79,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2014932595
-  m_SortingLayer: 20
-  m_SortingOrder: 163
+  m_SortingLayer: 19
+  m_SortingOrder: 159
   m_Sprite: {fileID: -1543855138, guid: 65107b6a261694476ad9e5836d7280b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 0}
+  menuFood: {fileID: 0}
 --- !u!114 &8671499141502816701
 MonoBehaviour:
   m_ObjectHideFlags: 0
