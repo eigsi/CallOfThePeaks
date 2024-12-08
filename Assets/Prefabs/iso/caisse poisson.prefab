@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ac46b3d6a7ada49bd6b0eb6650bb0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodValue: 10
-  replacementPrefab: {fileID: 7018203963979650234, guid: 2f2ed98ffb53809418a28a754f0b537a, type: 3}
+  foodValue: 20
+  replacementSprite: {fileID: -2045036156, guid: 508fc2fef22a1e24ca28905a36f3e8b5, type: 3}
 --- !u!61 &8388986248887299001
 BoxCollider2D:
   m_ObjectHideFlags: 0

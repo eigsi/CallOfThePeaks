@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class ShopMenuController : MonoBehaviour
 {
-    public GameObject menuPanel; 
+    public GameObject menuPanel;
+    public GameObject menuFood;
     private bool isNearChest = false;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R) && isNearChest)
         {
-            menuPanel.SetActive(!menuPanel.activeSelf); 
+            bool isMenuActive = menuPanel.activeSelf;
+
+            menuPanel.SetActive(!isMenuActive);
+            menuFood.SetActive(isMenuActive);
         }
     }
 

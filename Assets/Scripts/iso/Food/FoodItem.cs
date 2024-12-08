@@ -3,17 +3,20 @@ using UnityEngine;
 public class FoodItem : MonoBehaviour
 {
     public float foodValue = 10f; // Valeur nutritionnelle
-    public GameObject replacementPrefab; // Le prefab qui remplace l'item aprËs collecte
+   public Sprite replacementSprite;
 
     public void ReplaceItem()
     {
-        if (replacementPrefab != null)
+        if (replacementSprite != null)
         {
-            // Instancie le remplacement ‡ la position actuelle
-            Instantiate(replacementPrefab, transform.position, transform.rotation);
+            // R√©cup√®re le SpriteRenderer attach√© √† cet objet
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
 
-            // DÈtruit l'ancien item (cet objet)
-            Destroy(gameObject);
+            if (spriteRenderer != null)
+            {
+                // Change le sprite du SpriteRenderer
+                spriteRenderer.sprite = replacementSprite;
+            }
         }
     }
 }

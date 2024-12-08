@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodValue: 30
-  replacementPrefab: {fileID: 8727964861600159440, guid: 644541f23fae1b44289334f056ffeb7c, type: 3}
+  replacementSprite: {fileID: 21300000, guid: 394294dd19ffa2942aa18484d4a541e3, type: 3}
 --- !u!61 &5984923016263545619
 BoxCollider2D:
   m_ObjectHideFlags: 0
