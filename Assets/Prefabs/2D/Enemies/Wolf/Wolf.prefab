@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 760202500433910840}
   m_Layer: 0
   m_Name: Wolf
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -696,10 +696,11 @@ MonoBehaviour:
   maximumHealth: 1
   currentHealth: 1
   invincibilityTime: 0
-  useLives: 1
+  useLives: 0
   currentLives: 1
   maximumLives: 1
   respawnWaitTime: 3
+  movementScript: {fileID: 4545298525151859689}
   isInvincible: 0
   deathEffect: {fileID: 8944051092342456466, guid: ed262e40a58090a4e93a65db9d7ebb4e, type: 3}
   hitEffect: {fileID: 0}

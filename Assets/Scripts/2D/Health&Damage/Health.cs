@@ -274,6 +274,7 @@ public class Health : MonoBehaviour
                 }
                 else
                 {
+
                     Destroy(this.gameObject);
                 }
                 GameOver();
@@ -282,8 +283,9 @@ public class Health : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject);
             GameOver();
+            Destroy(this.gameObject);
+
         }
         GameManager.UpdateUIElements();
     }
@@ -296,6 +298,7 @@ public class Health : MonoBehaviour
     /// Return: 
     /// void (no return)
     /// </summary>
+
     public void GameOver()
     {
         if (GameManager.instance != null && gameObject.tag == "Player")

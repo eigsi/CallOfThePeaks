@@ -10,6 +10,7 @@ TagManager:
   - Tente
   - Feet
   - Food
+  - Enemy
   layers:
   - Default
   - TransparentFX
