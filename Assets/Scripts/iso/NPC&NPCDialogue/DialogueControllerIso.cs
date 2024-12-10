@@ -5,9 +5,12 @@ using System.Collections;
 public class DialogueController : MonoBehaviour
 {
     public GameObject dialogueBubble;   // La bulle de dialogue
+
+    public GameObject tutorielCanva;
     public TextMeshProUGUI dialogueText; // Texte de dialogue à afficher
     public bool isDialogueVisible = false; // Indicateur pour savoir si le dialogue est visible
     private string currentDialogue;     // Texte actuel à afficher
+
     public float textSpeed = 0.05f;     // Vitesse d'apparition des caractères
     private GameObject currentSignalBubble;
     public AudioSource typingSound;
@@ -15,6 +18,7 @@ public class DialogueController : MonoBehaviour
     void Start()
     {
         dialogueBubble.SetActive(false);
+        tutorielCanva.SetActive(false);
     }
 
     public void ShowDialogue(string dialogue)
@@ -25,14 +29,24 @@ public class DialogueController : MonoBehaviour
         StartCoroutine(TypeText());
     }
 
+    public void ShowDialogueWithTutorial(string dialogue)
+    {
+        currentDialogue = dialogue;
+        dialogueBubble.SetActive(true);
+        tutorielCanva.SetActive(true);
+        isDialogueVisible = true;
+        StartCoroutine(TypeText());
+    }
+
     public void HideDialogue()
     {
         StopAllCoroutines();
         dialogueBubble.SetActive(false);
+        tutorielCanva.SetActive(false);
         dialogueText.text = "";
         isDialogueVisible = false;
 
-         if (typingSound != null && typingSound.isPlaying)
+        if (typingSound != null && typingSound.isPlaying)
         {
             typingSound.Stop();
         }
@@ -49,9 +63,9 @@ public class DialogueController : MonoBehaviour
 
         foreach (char letter in currentDialogue.ToCharArray())
         {
-             if (!isDialogueVisible)
+            if (!isDialogueVisible)
             {
-                yield break; 
+                yield break;
             }
 
 
