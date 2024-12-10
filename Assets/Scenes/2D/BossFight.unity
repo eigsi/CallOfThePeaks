@@ -2625,10 +2625,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 9.81
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -21562,6 +21562,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1035478044}
+    - target: {fileID: 5584767307952450289, guid: 6f8cad053d1fa7a4081e7c3af8312ec4, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 354332588}
     - target: {fileID: 5586198380891368691, guid: 6f8cad053d1fa7a4081e7c3af8312ec4, type: 3}
       propertyPath: player
       value: 
