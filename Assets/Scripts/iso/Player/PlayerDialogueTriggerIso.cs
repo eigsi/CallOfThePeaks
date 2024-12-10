@@ -8,25 +8,25 @@ public class PlayerDialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("NPC"))
+        if (other.CompareTag("NPC") || other.CompareTag("NPCTUTO"))
         {
             currentNPCDialogue = other.GetComponent<NPCDialogue>();
             isNearNPC = true;
         }
     }
 
-   private void OnTriggerExit2D(Collider2D other)
-{
-    if (other.CompareTag("NPC"))
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("NPC") || other.CompareTag("NPCTUTO"))
         {
             dialogueController.HideDialogue();
             currentNPCDialogue = null;
             isNearNPC = false;
         }
-}
+    }
 
 
-   private void Update()
+    private void Update()
     {
         if (isNearNPC && currentNPCDialogue != null && Input.GetKeyDown(KeyCode.E))
         {
@@ -36,15 +36,32 @@ public class PlayerDialogueTrigger : MonoBehaviour
                 currentNPCDialogue.signalBubble.SetActive(false);
             }
 
-            // Afficher ou masquer le dialogue
-            if (dialogueController.isDialogueVisible)
+            if (currentNPCDialogue.CompareTag("NPCTUTO"))
             {
-                dialogueController.HideDialogue();
+                if (dialogueController.isDialogueVisible)
+                {
+                    // Si le dialogue est visible, le masquer
+                    dialogueController.HideDialogue();
+                }
+                else
+                {
+                    // Si le dialogue n'est pas visible, afficher le dialogue et le tutoriel
+                    dialogueController.ShowDialogueWithTutorial(currentNPCDialogue.dialogue);
+                }
             }
             else
             {
-                dialogueController.ShowDialogue(currentNPCDialogue.dialogue);
+                // Affiche uniquement la bulle de dialogue classique
+                if (dialogueController.isDialogueVisible)
+                {
+                    dialogueController.HideDialogue();
+                }
+                else
+                {
+                    dialogueController.ShowDialogue(currentNPCDialogue.dialogue);
+                }
             }
+
         }
     }
 }
