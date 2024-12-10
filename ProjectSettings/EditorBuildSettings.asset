@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cinematique/Intro2.unity
     guid: cf0cdddcb838c1d469a75e906371e61c
   - enabled: 1
+    path: Assets/Scenes/2D/Tutorial.unity
+    guid: fd92fc8731da78643a9f71d8f9586587
+  - enabled: 1
     path: Assets/Scenes/2D/Cave.unity
     guid: 56ee53a42b12c894795ca1d41220167a
   - enabled: 1

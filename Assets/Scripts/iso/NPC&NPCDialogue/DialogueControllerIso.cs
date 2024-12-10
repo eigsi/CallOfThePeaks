@@ -18,7 +18,10 @@ public class DialogueController : MonoBehaviour
     void Start()
     {
         dialogueBubble.SetActive(false);
-        tutorielCanva.SetActive(false);
+        if (tutorielCanva != null)
+        {
+            tutorielCanva.SetActive(false);
+        }
     }
 
     public void ShowDialogue(string dialogue)
@@ -33,7 +36,10 @@ public class DialogueController : MonoBehaviour
     {
         currentDialogue = dialogue;
         dialogueBubble.SetActive(true);
-        tutorielCanva.SetActive(true);
+        if (tutorielCanva != null)
+        {
+            tutorielCanva.SetActive(true);
+        }
         isDialogueVisible = true;
         StartCoroutine(TypeText());
     }
@@ -42,7 +48,10 @@ public class DialogueController : MonoBehaviour
     {
         StopAllCoroutines();
         dialogueBubble.SetActive(false);
-        tutorielCanva.SetActive(false);
+        if (tutorielCanva != null)
+        {
+            tutorielCanva.SetActive(false);
+        }
         dialogueText.text = "";
         isDialogueVisible = false;
 
