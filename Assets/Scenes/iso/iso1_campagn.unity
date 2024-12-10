@@ -7947,8 +7947,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a1baa06a69c4e2d9aec3719795873b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: Here lies the village chest! All the most precious tools of the inhabitants
-    are stored here! Choose the ones you think will be most useful for your journey.
+  dialogue: "Here lies the village chest! Inside, you\u2019ll find the most valuable
+    tools of the villagers. Choose carefully, they might be the key to your success.
+    Want to see how they work? Test them out in the Tutorial!"
   signalBubble: {fileID: 1768729591}
 --- !u!61 &344102535
 BoxCollider2D:
