@@ -7799,8 +7799,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a1baa06a69c4e2d9aec3719795873b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: "J'ai entendu parler d'une fleur magique qui pousse au sommet de la montagne.
-    Je suis s\xFBr qu'elle pourrait tous nous sauver... C'est notre seul espoir !"
+  dialogue: Here lies the village chest! All the most precious tools of the inhabitants
+    are stored here! Choose the ones you think will be most useful for your journey.
   signalBubble: {fileID: 1768729591}
 --- !u!61 &344102535
 BoxCollider2D:
@@ -8177,9 +8177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a1baa06a69c4e2d9aec3719795873b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: "Le village est en danger ! Une horrible mal\xE9diction se propage chez
-    les habitants... S'il te pla\xEEt, aide-nous \xE0 trouver un moyen de la stopper
-    !"
+  dialogue: The village is in danger! A horrible curse is spreading in the village...
+    Please help us find a way to stop it!
   signalBubble: {fileID: 255998755}
 --- !u!61 &430840792
 BoxCollider2D:
@@ -26192,7 +26191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a1baa06a69c4e2d9aec3719795873b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: JQPRGJOQPOEGJ
+  dialogue: ' To venture into the next land in full health, you must first gather
+    food by exploring the areas  available to you. You can then use the red tent
+    at the end of the path to go to the next place. Good luck Ines !'
   signalBubble: {fileID: 1463924094}
 --- !u!61 &926997943
 BoxCollider2D:
@@ -30825,6 +30826,11 @@ PrefabInstance:
     - target: {fileID: 2221373569360479128, guid: 014fd65c0165849f3ba9aaa6165957b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944454499458327467, guid: 014fd65c0165849f3ba9aaa6165957b1, type: 3}
+      propertyPath: dialogue
+      value: ' They say a horrible yeti is at the top of the mountain, guarding the
+        magical flower... Be careful, Ines!'
       objectReference: {fileID: 0}
     - target: {fileID: 6944454499458327467, guid: 014fd65c0165849f3ba9aaa6165957b1, type: 3}
       propertyPath: npcSoundClip
