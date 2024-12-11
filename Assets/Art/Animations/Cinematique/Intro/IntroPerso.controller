@@ -57,7 +57,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Capture d\u2019e\u0301cran 2024-10-23 155223(4)_10"
+  m_Name: IntroPerso
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: DialogueFini
