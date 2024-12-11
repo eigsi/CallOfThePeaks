@@ -83,4 +83,11 @@ public class FoodBarController : MonoBehaviour
             audioSource.PlayOneShot(foodSound); // Joue le son une fois
         }
     }
+
+    public bool IsFoodBarFull()
+    {
+        return currentFood >= maxFood;
+    }
+
+
 }

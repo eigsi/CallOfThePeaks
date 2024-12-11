@@ -27604,6 +27604,17 @@ Transform:
   - {fileID: 1510851896}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1664771857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8692654781715248053, guid: 5b2a0c9ff1c86154caca4e1f705d06cd, type: 3}
+  m_PrefabInstance: {fileID: 1106072142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36df2f7bf0a180f48adb69c91609675a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1687587930
 GameObject:
   m_ObjectHideFlags: 0
@@ -27791,6 +27802,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13fa83270938b4478be4fddad1c2b1c0, type: 3}
+--- !u!114 &1755126538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6942734727273383103, guid: 5b2a0c9ff1c86154caca4e1f705d06cd, type: 3}
+  m_PrefabInstance: {fileID: 1106072142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1768729591
 GameObject:
   m_ObjectHideFlags: 0
@@ -30833,6 +30855,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2830043036172847901, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
+      propertyPath: m_SortingOrder
+      value: 159
+      objectReference: {fileID: 0}
     - target: {fileID: 5855926381509229427, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
       propertyPath: m_Name
       value: player
@@ -30845,6 +30871,14 @@ PrefabInstance:
       propertyPath: menuPanel
       value: 
       objectReference: {fileID: 60781712}
+    - target: {fileID: 8671499141502816701, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
+      propertyPath: notificationText
+      value: 
+      objectReference: {fileID: 1755126538}
+    - target: {fileID: 8671499141502816701, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
+      propertyPath: foodBarController
+      value: 
+      objectReference: {fileID: 1664771857}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

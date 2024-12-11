@@ -456,3 +456,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodFill: {fileID: 8797396411653679887}
   maxFood: 100
+  foodSound: {fileID: 8300000, guid: 1f90be9b4db9e4626b7ec92dbe1e3911, type: 3}
