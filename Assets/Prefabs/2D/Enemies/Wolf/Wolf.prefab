@@ -541,6 +541,7 @@ GameObject:
   - component: {fileID: 3131122222196159054}
   - component: {fileID: 9195396781307006862}
   - component: {fileID: 760202500433910840}
+  - component: {fileID: 6121273938925827487}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Enemy
@@ -677,7 +678,7 @@ MonoBehaviour:
   enemyComponent: {fileID: 4545298525151859689}
   enemyAnimator: {fileID: 8236265429689615341}
   IdleAnimatorParameter: IsIdle
-  MovingAnimatorParameter: IsRunning
+  MovingAnimatorParameter: IsWalking
   DeadAnimatorParameter: IsDead
 --- !u!114 &3131122222196159054
 MonoBehaviour:
@@ -776,6 +777,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6121273938925827487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864041158389021647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f4df66e989f8b4aa889727d982a107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bark: {fileID: 6420783212789508711, guid: a0a526fea6bc3c34d8d09fe3f97254db, type: 3}
+  howl: {fileID: 1558131224443933367, guid: 0fcac75df6f576b47b5c81ca69d3fedf, type: 3}
+  growl: {fileID: 388685159456125399, guid: af37075f785dd3e40b43ea21bf4e2385, type: 3}
+  whines: {fileID: 5610073613766301700, guid: 7dac0789e7776c6488fb8ec41763d5f6, type: 3}
 --- !u!1 &6942525652579992246
 GameObject:
   m_ObjectHideFlags: 0
