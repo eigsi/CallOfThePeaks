@@ -35,5 +35,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2D/BossFight.unity
     guid: da517505c560c0343af0f8d315b360f1
+  - enabled: 1
+    path: Assets/Scenes/Cinematique/BossCinematic.unity
+    guid: ac65b09feedfbdd408465166cb21c02e
+  - enabled: 1
+    path: Assets/Scenes/2D/EndOfThePeaks.unity
+    guid: fe11695c018ed244fb74ea2112f48032
+  - enabled: 1
+    path: Assets/Scenes/Cinematique/End.unity
+    guid: 544810cf785b9fc47a6557d3234a2dd4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 50b4cda5fe10dd440b25aebc3276b666, type: 2}

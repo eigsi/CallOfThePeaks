@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossWeapon : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class BossWeapon : MonoBehaviour
 
     [Header("Player")]
 	public Transform player;
+
+	[Header("Settings")]
+    public string nameOfSceneToLoad;
 
     private float nextDamageTime = 0f;
 
@@ -51,7 +55,7 @@ public class BossWeapon : MonoBehaviour
         JetDeGlace.SetActive(false);
     }
 
-	public void StartThrowAttack()
+    public void StartThrowAttack()
     {
         if (player == null)
         {
@@ -59,82 +63,67 @@ public class BossWeapon : MonoBehaviour
             return;
         }
 
-        // Instancier la boule de neige
+        // Instanciation du projectile
         GameObject projectile = Instantiate(projectilePrefab, launchPoint.position, Quaternion.identity);
-
-        // Appliquer la trajectoire
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        if (rb != null)
+
+        if (rb == null)
         {
-            Vector2 velocity = CalculateLaunchVelocity(player.position, launchPoint.position, launchSpeed, arcHeight);
-
-            if (velocity == Vector2.zero)
-            {
-                Debug.LogError("La vitesse calculée est invalide.");
-                Destroy(projectile);
-                return;
-            }
-
-            rb.velocity = velocity;
-
-            // Détruire la boule de neige après impact
-            Snowball snowball = projectile.AddComponent<Snowball>();
-            snowball.groundMask = groundMask;
+            Debug.LogError("Le prefab du projectile doit contenir un Rigidbody2D.");
+            Destroy(projectile);
+            return;
         }
-        else
+
+        // Calcul de la vélocité
+        Vector2 velocity = CalculateLaunchVelocity(player.position, launchPoint.position, launchSpeed, arcHeight);
+
+        if (velocity == Vector2.zero)
         {
-            Debug.LogError("Le projectile instancié n'a pas de Rigidbody2D.");
+            Debug.LogError("La vitesse calculée est invalide, le projectile ne sera pas lancé.");
+            Destroy(projectile);
+            return;
         }
+
+        // Appliquer la vélocité
+        rb.velocity = velocity;
+
+        // Ajouter le script Snowball pour gérer la destruction
+        Snowball snowball = projectile.AddComponent<Snowball>();
+        snowball.groundMask = groundMask;
     }
 
     private Vector2 CalculateLaunchVelocity(Vector2 target, Vector2 origin, float speed, float height)
-	{
-		// Calculer le déplacement
-		Vector2 displacement = target - origin;
+    {
+        Vector2 displacement = target - origin;
 
-		// Prévenir les divisions par zéro pour x
-		if (Mathf.Abs(displacement.x) < 0.01f)
-		{
-			Debug.LogWarning("Distance horizontale trop faible, ajustement automatique.");
-			displacement.x = 0.01f; // Ajouter une petite valeur
-		}
+        // Ajustement des paramètres si nécessaire
+        if (Mathf.Abs(displacement.x) < 0.01f) displacement.x = 0.01f; // Prévenir divisions par zéro
 
-		// Vérifier la hauteur et la vitesse d'entrée
-		if (height <= 0 || speed <= 0)
-		{
-			Debug.LogError("Hauteur ou vitesse invalide.");
-			return Vector2.zero;
-		}
+        // Calcul du temps de vol basé sur l'équation du mouvement
+        float timeToApex = Mathf.Sqrt(2 * height / Physics2D.gravity.magnitude);
+        if (timeToApex <= 0) return Vector2.zero;
 
-		// Calcul du temps pour atteindre le sommet
-		float timeToApex = Mathf.Sqrt(2 * height / Physics2D.gravity.magnitude);
-		if (timeToApex <= 0)
-		{
-			Debug.LogError("Temps pour atteindre le sommet invalide.");
-			return Vector2.zero;
-		}
+        float totalTime = timeToApex + Mathf.Sqrt(2 * Mathf.Abs(displacement.y - height) / Physics2D.gravity.magnitude);
+        if (totalTime <= 0) return Vector2.zero;
 
-		// Temps total de vol
-		float totalTime = timeToApex + Mathf.Sqrt(2 * (displacement.y - height) / Physics2D.gravity.magnitude);
-		if (totalTime <= 0)
-		{
-			Debug.LogError("Temps total de vol invalide.");
-			return Vector2.zero;
-		}
+        // Composantes de la vélocité
+        float vx = displacement.x / totalTime;
+        float vy = (2 * height / timeToApex) - (Physics2D.gravity.magnitude * timeToApex);
 
-		// Calcul des composantes de la vitesse
-		float vx = displacement.x / totalTime; // Vitesse horizontale
-		float vy = (2 * height / timeToApex) - (Physics2D.gravity.magnitude * timeToApex); // Vitesse verticale
+        // Validation des valeurs calculées
+        if (float.IsNaN(vx) || float.IsNaN(vy))
+        {
+            Debug.LogError($"Vitesse invalide calculée : vx = {vx}, vy = {vy}");
+            return Vector2.zero;
+        }
 
-		// Vérification finale
-		if (float.IsNaN(vx) || float.IsNaN(vy))
-		{
-			Debug.LogError($"Vitesse invalide calculée : vx = {vx}, vy = {vy}");
-			return Vector2.zero;
-		}
+        return new Vector2(vx, vy);
+    }
 
-		return new Vector2(vx, vy);
-	}
+	private void SceneChanger()
+    {
+        SceneManager.LoadScene(nameOfSceneToLoad);
+    }
 }
 
 public class Snowball : MonoBehaviour
@@ -149,4 +138,6 @@ public class Snowball : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+	
 }

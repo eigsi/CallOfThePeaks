@@ -9,32 +9,44 @@ public class BossHealth : MonoBehaviour
 	public int health = 9;
 
 	public GameObject deathEffect;
+	public float damageCooldown = 1.0f;
+	private float cooldownTimer = 0f;
 
 	public bool isInvulnerable = false;
 
+	public void Update ()
+	{
+		print(cooldownTimer);
+		cooldownTimer += Time.deltaTime;
+	}
+
 	public void TakeDamage(int damage)
 	{
+		
 
-		if (isInvulnerable)
-			return;
-
-		health -= damage;
-
-		if (health <= 6)
+		if(cooldownTimer >= damageCooldown)
 		{
-			GetComponent<Animator>().SetBool("isPhase2", true);
-			GetComponent<Animator>().SetBool("isPhase1", false);
-		}
-		if (health <= 3)
-		{
-			GetComponent<Animator>().SetBool("isPhase3", true);
-			GetComponent<Animator>().SetBool("isPhase2", false);
-		}
+			health -= damage;
+			if (health <= 6)
+			{
+				GetComponent<Animator>().SetBool("isPhase2", true);
+				GetComponent<Animator>().SetBool("isPhase1", false);
+				cooldownTimer = 0f;
+			}
+			if (health <= 3)
+			{
+				GetComponent<Animator>().SetBool("isPhase3", true);
+				GetComponent<Animator>().SetBool("isPhase2", false);
+				cooldownTimer = 0f;
+			}
 
-		if (health <= 0)
-		{
-			GetComponent<Animator>().SetBool("isDead", true);
-			GetComponent<Animator>().SetBool("isPhase3", false);
+			if (health <= 0)
+			{
+				GetComponent<Animator>().SetBool("isDead", true);
+				GetComponent<Animator>().SetBool("isPhase3", false);
+				cooldownTimer = 0f;
+			}
+			cooldownTimer = 0f;
 		}
 	}
 
