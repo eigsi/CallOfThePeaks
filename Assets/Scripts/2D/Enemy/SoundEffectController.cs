@@ -20,6 +20,6 @@ public class SoundEffectController : MonoBehaviour
         float distance = Vector2.Distance(player.transform.position, transform.position);
 
         // Modifier la spatialisation manuellement
-        audioSource.volume = Mathf.Clamp01(1 - (distance / audioSource.maxDistance));
+        audioSource.volume = Mathf.Clamp01(0.5f - (distance / audioSource.maxDistance));
     }
 }
