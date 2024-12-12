@@ -45091,6 +45091,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 60781712}
     - target: {fileID: 8671499141502816701, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
+      propertyPath: sceneToLoad
+      value: Prairie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671499141502816701, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
       propertyPath: notificationText
       value: 
       objectReference: {fileID: 1755126538}

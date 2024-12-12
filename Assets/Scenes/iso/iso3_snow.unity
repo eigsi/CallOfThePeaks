@@ -75010,6 +75010,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 20343137419999356, guid: 5d4ac90ffd69cb74a8b9649d9fef8f36, type: 3}
   m_PrefabInstance: {fileID: 2064935625}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2124958809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 45945475994460280, guid: 1c47db863eaa83c4587b1600efa4d79f, type: 3}
+  m_PrefabInstance: {fileID: 1169576126}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98af1e7c05f43413d863f94e861dc5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &773630790219365688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75018,6 +75029,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 967571647}
     m_Modifications:
+    - target: {fileID: 1211464900192772142, guid: e50d4ceca372bc446abd9297653fcda2, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 2444149372698996758, guid: e50d4ceca372bc446abd9297653fcda2, type: 3}
       propertyPath: m_Size.x
       value: 0.5818844
@@ -75037,6 +75052,11 @@ PrefabInstance:
     - target: {fileID: 2914087963215874287, guid: e50d4ceca372bc446abd9297653fcda2, type: 3}
       propertyPath: m_Name
       value: pnj snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643378743617688671, guid: e50d4ceca372bc446abd9297653fcda2, type: 3}
+      propertyPath: dialogue
+      value: If I was you, I would take the boots for the top of the mountain ! I
+        cannot go further in this path because I didn't take my special boots...
       objectReference: {fileID: 0}
     - target: {fileID: 5333587075399462122, guid: e50d4ceca372bc446abd9297653fcda2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -75370,7 +75390,7 @@ PrefabInstance:
     - target: {fileID: 1154768774020212382, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
       propertyPath: dialogueController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2124958809}
     - target: {fileID: 2018024094502499791, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -75427,6 +75447,10 @@ PrefabInstance:
       propertyPath: menuPanel
       value: 
       objectReference: {fileID: 708945763}
+    - target: {fileID: 8671499141502816701, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
+      propertyPath: sceneToLoad
+      value: BossFight
+      objectReference: {fileID: 0}
     - target: {fileID: 8671499141502816701, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
       propertyPath: notificationText
       value: 
