@@ -670,7 +670,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 663232110566294192, guid: 7b045daee007db742ab1ed657722ef0a, type: 3}
       propertyPath: m_SortingLayer
-      value: 22
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 663232110566294192, guid: 7b045daee007db742ab1ed657722ef0a, type: 3}
       propertyPath: m_SortingOrder
@@ -678,7 +678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 663232110566294192, guid: 7b045daee007db742ab1ed657722ef0a, type: 3}
       propertyPath: m_SortingLayerID
-      value: 659459637
+      value: -588567107
       objectReference: {fileID: 0}
     - target: {fileID: 5223204636336206534, guid: 7b045daee007db742ab1ed657722ef0a, type: 3}
       propertyPath: foodValue
@@ -31431,8 +31431,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 728386403
-  m_SortingLayer: 21
+  m_SortingLayerID: -919077481
+  m_SortingLayer: 16
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -34053,7 +34053,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445490161}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bf195c5e443ae4842bea43ba15bf0fa3, type: 2}
   m_CullingMode: 0
@@ -34120,7 +34120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 857549521737857100, guid: 9cc8d8364e4d4f648a1afcead0ca346a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1627589143587995381, guid: 9cc8d8364e4d4f648a1afcead0ca346a, type: 3}
       propertyPath: m_Color.a
@@ -35175,7 +35175,7 @@ Transform:
   m_GameObject: {fileID: 1864317220}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07411111, y: -0.56, z: 0.1043798}
+  m_LocalPosition: {x: -0.3, y: -0.3, z: 0.1043798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45076,7 +45076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2830043036172847901, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
       propertyPath: m_SortingOrder
-      value: 159
+      value: 133
       objectReference: {fileID: 0}
     - target: {fileID: 5855926381509229427, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
       propertyPath: m_Name
