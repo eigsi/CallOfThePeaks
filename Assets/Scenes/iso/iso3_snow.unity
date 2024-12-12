@@ -72722,6 +72722,7 @@ GameObject:
   - component: {fileID: 1445490162}
   - component: {fileID: 1445490165}
   - component: {fileID: 1445490166}
+  - component: {fileID: 1445490167}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -72772,7 +72773,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.6
+  orthographic size: 0.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -72863,6 +72864,27 @@ MonoBehaviour:
   offsetZ: -10
   offset: {x: 0.1, y: 0.25}
   smoothSpeed: 0.1
+--- !u!95 &1445490167
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445490161}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf195c5e443ae4842bea43ba15bf0fa3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1460088275
 GameObject:
   m_ObjectHideFlags: 0
@@ -74226,7 +74248,7 @@ Transform:
   m_GameObject: {fileID: 1864317220}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07411111, y: -0.56, z: 0.1043798}
+  m_LocalPosition: {x: -0.5, y: -0.8, z: 0.1043798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -75391,7 +75413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2830043036172847901, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
       propertyPath: m_SortingOrder
-      value: 159
+      value: 183
       objectReference: {fileID: 0}
     - target: {fileID: 5855926381509229427, guid: 77bb52b50ea454caca0d5d69326f99ba, type: 3}
       propertyPath: m_Name
