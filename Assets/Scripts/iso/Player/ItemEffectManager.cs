@@ -6,21 +6,27 @@ public class ItemEffectManager : MonoBehaviour
 {
     public GameObject player;           // Référence au joueur
     public GameObject LanterneToDisable;
-    public GameObject GrappinToDisable;  
-    public GameObject CramponToDisable;  
+    public GameObject GrappinToDisable;
+    public GameObject CramponToDisable;
 
     void Start()
     {
+        Debug.Log("ItemEffectManager: Initialisation de l'effet des items.");
         // Vérifie que le ShopItemManager existe
         if (ShopItemManager.Instance != null)
         {
+            Debug.Log("ShopItemManager trouvé. Vérification des états des items...");
+
+
             // Index 0 : Si l'item n'est PAS sélectionné, enlever un script du joueur
             if (!ShopItemManager.Instance.GetItemState(0))
             {
+                Debug.Log("Item 0 n'est pas sélectionné. Suppression du script Grapple et désactivation de GrappinToDisable.");
                 // Remplace 'ScriptToRemove' par le nom du script que tu veux enlever
                 Grapple script = player.GetComponent<Grapple>();
                 if (script != null)
                 {
+                    Debug.Log("Script 'Grapple' trouvé et détruit.");
                     Destroy(script);
                 }
                 else
@@ -30,6 +36,7 @@ public class ItemEffectManager : MonoBehaviour
 
                 if (GrappinToDisable != null)
                 {
+                    Debug.Log("GrappinToDisable trouvé et désactivé.");
                     GrappinToDisable.SetActive(false);
                 }
                 else
