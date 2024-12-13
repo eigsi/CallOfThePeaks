@@ -46,7 +46,7 @@ public class ItemEffectManager : MonoBehaviour
             }
 
             // Index 1 : Désactiver un GameObject dans la scène si l'item est sélectionné
-            if (ShopItemManager.Instance.GetItemState(1))
+            if (!ShopItemManager.Instance.GetItemState(1))
             {
                 if (LanterneToDisable != null)
                 {
@@ -64,7 +64,7 @@ public class ItemEffectManager : MonoBehaviour
                 Health healthScript = player.GetComponent<Health>();
                 if (healthScript != null)
                 {
-                    healthScript.currentLives += 10;  // Augmente la vie de 10 (par exemple)
+                    healthScript.currentLives += 3;  // Augmente la vie de 10 (par exemple)
                 }
                 else
                 {
@@ -73,7 +73,7 @@ public class ItemEffectManager : MonoBehaviour
             }
 
             // Index 3 : Désactiver un script sur le joueur
-            if (ShopItemManager.Instance.GetItemState(3))
+            if (!ShopItemManager.Instance.GetItemState(3))
             {
                 // Remplace 'ScriptToDisable' par le nom du script que tu veux désactiver
                 Grab script = player.GetComponent<Grab>();
