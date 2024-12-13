@@ -304,6 +304,7 @@ MonoBehaviour:
   currentLives: 3
   maximumLives: 5
   respawnWaitTime: 3
+  movementScript: {fileID: 0}
   isInvincible: 0
   deathEffect: {fileID: 4258269390177790066, guid: 92a2ffaf16caa4749aa991447df6d902, type: 3}
   hitEffect: {fileID: 0}
@@ -393,7 +394,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2837551211724514151}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b3121ed86c614945bfba0b5d1b9c85e, type: 3}
   m_Name: 

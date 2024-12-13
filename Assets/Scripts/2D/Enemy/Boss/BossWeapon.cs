@@ -97,7 +97,7 @@ public class BossWeapon : MonoBehaviour
         Vector2 displacement = target - origin;
 
         // Ajustement des paramètres si nécessaire
-        if (Mathf.Abs(displacement.x) < 0.01f) displacement.x = 0.01f; // Prévenir divisions par zéro
+        if (Mathf.Abs(displacement.x) < 0.0001f) displacement.x = 0.0001f; // Prévenir divisions par zéro
 
         // Calcul du temps de vol basé sur l'équation du mouvement
         float timeToApex = Mathf.Sqrt(2 * height / Physics2D.gravity.magnitude);

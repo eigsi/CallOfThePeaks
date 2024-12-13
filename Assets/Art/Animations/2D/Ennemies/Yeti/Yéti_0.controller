@@ -39,13 +39,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   punchAttackRange: 1.5
-  attackCooldownPunch: 5
-  throwAttackRange1: 1.5
-  throwAttackRange2: 5
-  attackCooldownThrow: 8
-  vomitAttackRange1: 5
-  vomitAttackRange2: 10
-  attackCooldownVomit: 10
+  attackCooldownPunch: 2
+  throwAttackRange1: 1000
+  throwAttackRange2: 1000
+  attackCooldownThrow: 5
+  vomitAttackRange1: 1000
+  vomitAttackRange2: 1000
+  attackCooldownVomit: 7
 --- !u!1101 &-7805852364966897632
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -397,13 +397,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   punchAttackRange: 1.5
-  attackCooldownPunch: 5
+  attackCooldownPunch: 1
   throwAttackRange1: 1.5
   throwAttackRange2: 5
-  attackCooldownThrow: 8
+  attackCooldownThrow: 5
   vomitAttackRange1: 5
-  vomitAttackRange2: 10
-  attackCooldownVomit: 10
+  vomitAttackRange2: 100
+  attackCooldownVomit: 7
 --- !u!1101 &-1835729709660097266
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -490,13 +490,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   punchAttackRange: 1.5
-  attackCooldownPunch: 5
+  attackCooldownPunch: 1
   throwAttackRange1: 1.5
   throwAttackRange2: 5
-  attackCooldownThrow: 8
-  vomitAttackRange1: 5
-  vomitAttackRange2: 10
-  attackCooldownVomit: 10
+  attackCooldownThrow: 5
+  vomitAttackRange1: 1000
+  vomitAttackRange2: 1000
+  attackCooldownVomit: 7
 --- !u!1101 &-489800901998016379
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
