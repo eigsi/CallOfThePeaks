@@ -1,15 +1,12 @@
-
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ShopItemButton : MonoBehaviour
 {
-    public Image normalImage; // Image pour la version normale
-    public Image darkImage;   // Image pour la version sombre
+    public Image normalImage; // Image normale
+    public Image darkImage;   // Image sombre
     public int itemIndex; 
-    private bool isSelected = false; // État de sélection
-    private static int selectedItemCount = 0; // Compteur d'items sélectionnés
-    private static int maxSelectedItems = 2;  // Nombre maximal d'items sélectionnés
+    private bool isSelected = false; 
 
     void Start()
     {
@@ -19,29 +16,33 @@ public class ShopItemButton : MonoBehaviour
 
     void OnButtonClick()
     {
+        var manager = ShopItemManager.Instance;
+        if (manager == null)
+        {
+            Debug.LogError("ShopItemManager instance is missing in this scene!");
+            return;
+        }
+
+        int selectedCount = CountSelectedItems(manager);
+
         if (isSelected)
         {
             // Désélectionner l'item
             isSelected = false;
-            selectedItemCount--;
-
-            // Mise à jour de l'état dans le ShopItemManager
-            ShopItemManager.Instance.SetItemState(itemIndex, false);
+            manager.SetItemState(itemIndex, false);
         }
         else
         {
-            if (selectedItemCount < maxSelectedItems)
+            // Vérifier si on peut encore sélectionner
+            if (selectedCount < 2)
             {
-                // Sélectionner l'item
                 isSelected = true;
-                selectedItemCount++;
-
-                ShopItemManager.Instance.SetItemState(itemIndex, true);
+                manager.SetItemState(itemIndex, true);
             }
             else
             {
-                // Ne rien faire ou afficher un message indiquant que le maximum est atteint
-                Debug.Log("Vous ne pouvez sélectionner que " + maxSelectedItems + " items.");
+                // Maximum atteint
+                Debug.Log("Vous ne pouvez sélectionner que 2 items.");
                 return;
             }
         }
@@ -61,5 +62,15 @@ public class ShopItemButton : MonoBehaviour
             normalImage.gameObject.SetActive(false);
             darkImage.gameObject.SetActive(true);
         }
+    }
+
+    private int CountSelectedItems(ShopItemManager manager)
+    {
+        int count = 0;
+        for (int i = 0; i < manager.selectedItems.Length; i++)
+        {
+            if (manager.selectedItems[i]) count++;
+        }
+        return count;
     }
 }
