@@ -65,6 +65,11 @@ public class Chrono : MonoBehaviour
         timer = 0f; // Réinitialise le chrono
     }
 
+    public void Chrono0()
+    {
+        timer = 0f; // Réinitialise le chrono
+    }
+
     public void StopChrono()
     {
         isRunning = false; // Arrête le chrono
