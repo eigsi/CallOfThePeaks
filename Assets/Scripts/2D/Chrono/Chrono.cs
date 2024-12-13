@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ChronoManager : MonoBehaviour
+public class Chrono : MonoBehaviour
 {
     public Text chronoText; // Référence au Text UI pour afficher le chrono
     public Button startButton; // Bouton pour commencer le chrono
@@ -10,7 +10,7 @@ public class ChronoManager : MonoBehaviour
     private float timer = 0f; // Temps écoulé
     private bool isRunning = false; // Indique si le chrono est actif
 
-    private static ChronoManager instance; // Instance unique du ChronoManager
+    public static Chrono instance; // Instance unique du ChronoManager
 
     void Awake()
     {

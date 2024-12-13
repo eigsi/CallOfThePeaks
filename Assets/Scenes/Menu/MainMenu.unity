@@ -927,50 +927,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: iso3_snow
---- !u!1 &120138370
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 120138372}
-  - component: {fileID: 120138371}
-  m_Layer: 0
-  m_Name: Chrono
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &120138371
+--- !u!114 &120138371 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4549844255859949503, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+  m_PrefabInstance: {fileID: 9188152129245732597}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120138370}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40fdd9534e06df4489007ff0dc7632a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &120138372
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120138370}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.108929, y: 1.3671974, z: -0.05865444}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &254857589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3273,6 +3240,63 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 7313202452674301877, guid: 13fa83270938b4478be4fddad1c2b1c0, type: 3}
   m_PrefabInstance: {fileID: 2140398269}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9188152129245732597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1679095165655006018, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.108929
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679095165655006018, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3671974
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679095165655006018, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.05865444
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679095165655006018, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679095165655006018, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679095165655006018, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679095165655006018, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679095165655006018, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679095165655006018, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679095165655006018, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239943794311796706, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
+      propertyPath: m_Name
+      value: Chrono
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05c8001e9723f0645a8f07d58e8f4905, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3284,4 +3308,4 @@ SceneRoots:
   - {fileID: 1205114983}
   - {fileID: 2140398269}
   - {fileID: 946509912}
-  - {fileID: 120138372}
+  - {fileID: 9188152129245732597}
